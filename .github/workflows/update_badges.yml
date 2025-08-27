@@ -1,0 +1,59 @@
+name: Update Dataset Badges
+
+on:
+  schedule:
+    - cron: "0 3 * * *"   # Runs daily at 3 AM UTC
+  workflow_dispatch:      # Allow manual trigger
+
+jobs:
+  update-badges:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+
+      - name: Install deps
+        run: pip install requests
+
+      - name: Fetch dataset metadata
+        run: |
+          python <<EOF
+          import requests, json, math
+          url = "https://open.canada.ca/data/api/action/package_show?id=8ec4a9df-b76b-4a67-8f93-cdbc2e040098"
+          r = requests.get(url).json()
+          data = r["result"]
+          size = sum([res.get("size",0) or 0 for res in data["resources"]])
+          size_mb = round(size / (1024*1024), 2)
+          last_update = data["metadata_modified"].split("T")[0]
+
+          # Build badge JSONs
+          badges = {
+            "schemaVersion": 1,
+            "label": "Dataset Size",
+            "message": f"{size_mb} MB",
+            "color": "blue"
+          }
+          with open("dataset_size.json","w") as f: json.dump(badges, f)
+
+          badges = {
+            "schemaVersion": 1,
+            "label": "Last Update",
+            "message": last_update,
+            "color": "green"
+          }
+          with open("dataset_lastupdate.json","w") as f: json.dump(badges, f)
+          EOF
+
+      - name: Commit updated badges
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add dataset_size.json dataset_lastupdate.json
+          git commit -m "Auto-update dataset badges"
+          git push
