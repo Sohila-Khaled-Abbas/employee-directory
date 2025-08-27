@@ -5,6 +5,8 @@
 ![Power BI](https://img.shields.io/badge/PowerBI-Dashboard-orange?logo=powerbi)
 ![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python)
 ![Status](https://img.shields.io/badge/Status-In_Progress-green)
+![Dataset Size](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Sohila-Khaled-Abbas/employee_directory/main/dataset_size.json)
+![Last Update](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Sohila-Khaled-Abbas/employee_directory/main/dataset_lastupdate.json)
 
 This project builds a **searchable employee directory** using PostgreSQL and Power BI, based on the [Government of Canada - Federal Employee Directory dataset](https://open.canada.ca/data/en/dataset/8ec4a9df-b76b-4a67-8f93-cdbc2e040098).
 
