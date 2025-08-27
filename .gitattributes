@@ -1,0 +1,11 @@
+# Normalize line endings
+* text=auto eol=lf
+
+# Treat SQL and MD as text
+*.sql text
+*.md text
+*.json text
+
+# Keep binary files intact
+*.pbit binary
+*.png binary
