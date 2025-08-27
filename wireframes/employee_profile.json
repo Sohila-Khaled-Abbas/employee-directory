@@ -1,0 +1,197 @@
+{
+  "meta": {
+    "version": "1.0",
+    "canvasSize": {
+      "width": 1440,
+      "height": 1024
+    },
+    "font": {
+      "family": "Inter",
+      "size": 12
+    },
+    "colors": {
+      "bg": "#0B1220",
+      "panel": "#111827",
+      "card": "#0F172A",
+      "accent": "#10B981",
+      "muted": "#94A3B8",
+      "text": "#E5E7EB"
+    }
+  },
+  "document": {
+    "type": "FRAME",
+    "name": "Employee Profile",
+    "x": 0,
+    "y": 0,
+    "width": 1440,
+    "height": 1024,
+    "layoutMode": "NONE",
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": "#0B1220"
+      }
+    ],
+    "strokes": [
+      {
+        "type": "SOLID",
+        "color": "#1F2937"
+      }
+    ],
+    "strokeWeight": 1,
+    "children": [
+      {
+        "type": "RECTANGLE",
+        "name": "Header",
+        "x": 24,
+        "y": 24,
+        "width": 1392,
+        "height": 160,
+        "fills": [
+          {
+            "type": "SOLID",
+            "color": "#0F172A"
+          }
+        ],
+        "cornerRadius": 16,
+        "strokes": [
+          {
+            "type": "SOLID",
+            "color": "#1F2937"
+          }
+        ],
+        "strokeWeight": 1
+      },
+      {
+        "type": "RECTANGLE",
+        "name": "Avatar",
+        "x": 48,
+        "y": 48,
+        "width": 96,
+        "height": 96,
+        "fills": [
+          {
+            "type": "SOLID",
+            "color": "#0B1220"
+          }
+        ],
+        "cornerRadius": 48,
+        "strokes": [
+          {
+            "type": "SOLID",
+            "color": "#1F2937"
+          }
+        ],
+        "strokeWeight": 1
+      },
+      {
+        "type": "TEXT",
+        "name": "Full Name",
+        "x": 160,
+        "y": 60,
+        "characters": "Alex Johnson",
+        "fontSize": 24,
+        "fontWeight": "700",
+        "color": "#E5E7EB"
+      },
+      {
+        "type": "TEXT",
+        "name": "Job Title",
+        "x": 160,
+        "y": 96,
+        "characters": "Senior Policy Analyst",
+        "fontSize": 16,
+        "fontWeight": "500",
+        "color": "#94A3B8"
+      },
+      {
+        "type": "RECTANGLE",
+        "name": "Contact Card",
+        "x": 24,
+        "y": 200,
+        "width": 680,
+        "height": 320,
+        "fills": [
+          {
+            "type": "SOLID",
+            "color": "#0F172A"
+          }
+        ],
+        "cornerRadius": 16,
+        "strokes": [
+          {
+            "type": "SOLID",
+            "color": "#1F2937"
+          }
+        ],
+        "strokeWeight": 1
+      },
+      {
+        "type": "RECTANGLE",
+        "name": "Org Info Card",
+        "x": 736,
+        "y": 200,
+        "width": 680,
+        "height": 320,
+        "fills": [
+          {
+            "type": "SOLID",
+            "color": "#0F172A"
+          }
+        ],
+        "cornerRadius": 16,
+        "strokes": [
+          {
+            "type": "SOLID",
+            "color": "#1F2937"
+          }
+        ],
+        "strokeWeight": 1
+      },
+      {
+        "type": "RECTANGLE",
+        "name": "Assistant Card",
+        "x": 24,
+        "y": 536,
+        "width": 680,
+        "height": 200,
+        "fills": [
+          {
+            "type": "SOLID",
+            "color": "#0F172A"
+          }
+        ],
+        "cornerRadius": 16,
+        "strokes": [
+          {
+            "type": "SOLID",
+            "color": "#1F2937"
+          }
+        ],
+        "strokeWeight": 1
+      },
+      {
+        "type": "RECTANGLE",
+        "name": "Location Card",
+        "x": 736,
+        "y": 536,
+        "width": 680,
+        "height": 200,
+        "fills": [
+          {
+            "type": "SOLID",
+            "color": "#0F172A"
+          }
+        ],
+        "cornerRadius": 16,
+        "strokes": [
+          {
+            "type": "SOLID",
+            "color": "#1F2937"
+          }
+        ],
+        "strokeWeight": 1
+      }
+    ]
+  }
+}

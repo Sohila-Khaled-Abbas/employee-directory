@@ -1,0 +1,73 @@
+// title
+title Employee Directory Data Model
+
+// define tables
+employees [icon: user, color: yellow]{
+  employee_id serial pk
+  surname text
+  given_name text
+  initials text
+  prefix_en text
+  prefix_fr text
+  suffix_en text
+  suffix_fr text
+  title_en text
+  title_fr text
+  telephone_number text
+  fax_number text
+  tdd_number text
+  secure_telephone_number text
+  secure_fax_number text
+  alternate_telephone_number text
+  email text unique
+  admin_assistant text
+  admin_assistant_phone text
+  exec_assistant text
+  exec_assistant_phone text
+  dept_acronym text
+  org_acronym text
+  postal_code text fk
+  mailstop text
+  building_en text
+  building_fr text
+  floor text
+  room text
+}
+
+
+
+departments [icon: briefcase, color: blue]{
+  dept_id serial pk
+  dept_acronym text
+  dept_name_en text
+  dept_name_fr text
+}
+
+organizations [icon: tag, color: green]{
+  org_id serial pk
+  org_acronym text
+  org_name_en text
+  org_name_fr text
+  org_structure_en text
+  org_structure_fr text
+}
+
+locations [icon:map, color: orange]{
+  location_id serial pk
+  street_address_en text
+  street_address_fr text
+  country_en text
+  country_fr text
+  province_en text
+  province_fr text
+  city_en text
+  city_fr text
+  postal_code text fk
+}
+
+// define relationships
+employees.dept_acronym > departments.dept_acronym
+employees.org_acronym > organizations.org_acronym
+employees.postal_code > locations.postal_code
+
+
