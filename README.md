@@ -181,3 +181,8 @@ Employee-Directory/
 ## 🤝 Contribution
 
 See [CONTRIBUTING.md](CONTRIBUTING.md)
+
+
+## Environment configuration
+
+Copy [the placeholder configuration](.env.example) to a local `.env` file and replace the example values with credentials for a database you control. The real `.env` file is ignored and must never be committed. An example file is not a live database connection or a guarantee that the schema and datasets have been deployed.
